@@ -1,39 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🧠 Research Data Collection System
 
-## Getting Started
+🔗 Live Demo: https://estudio-app-silk.vercel.app/
 
-First, run the development server:
+📌 Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project is a full-stack web application designed to support structured data collection for quasi-experimental research in educational settings.
 
-npm install papaparse
+The system enables researchers and evaluators to manage participants, create dynamic Likert-scale instruments, and capture pre-test and post-test data in a controlled and consistent manner.
+
+Key features include:
+
+Role-based workflow (Admin and Evaluators)
+Participant registration with unique coded identifiers
+Dynamic creation of multiple instruments (questionnaires)
+Likert-scale data collection (1–4 scale)
+Pre-test / Post-test structure
+Duplicate submission prevention (per participant, instrument, and test type)
+Relational data storage for clean analysis pipelines
+CSV export ready for statistical analysis in JASP or spreadsheet tools
+
+The system is optimized for mobile and tablet usage, enabling real-time data collection in field environments.
+
+⚙️ Tech Stack
+Next.js (App Router, Client Components)
+JavaScript
+Supabase (Authentication + PostgreSQL)
+PostgreSQL
+Tailwind CSS (v3 stable)
+Papa Parse (CSV export)
+Vercel (Deployment)
+
+🏗️ System Architecture
+
+The application follows a modular structure:
+
+Public Layer
+Login page (/)
+Authentication handled via Supabase
+Protected Panel
+Dashboard
+Participants management
+Instruments (dynamic questionnaire creation)
+Test application (pre/post)
+Results & CSV export
+Database Design (Relational)
+
+Core tables:
+
+participants
+questionnaires
+questions
+responses
+response_answers
+
+This structure allows:
+
+Multiple instruments
+Scalable question sets
+Clean row-based statistical datasets
 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
