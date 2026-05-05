@@ -63,5 +63,5 @@ Clean row-based statistical datasets
 
 ## Instruments 
 
-![alt text](Instriments.png)
+![Creation tool for Likert Test ](/img/Instruments.png)
 
